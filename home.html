@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://cs.brown.edu/courses/csci1300/layout.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            #background {
+                width: 100%;
+                height: 100%;
+                background-color:rgb(20, 20, 20);
+            }
+            #top_bar {
+                display: flex;
+                align-items: center;
+                height: 41px;
+                background: rgb(255, 255, 100);
+                margin-top: -8px;
+                margin-left: -8px;
+                justify-content: space-between;
+            }
+
+            #genius_logo {
+                height:41px;
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+            }
+
+            #sign_up_in {
+                width: 150px;
+                padding-left:2%;
+                padding-right:2%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            }
+
+            #search_bar_icon {
+                position:absolute;
+                padding-left: 50px;
+                padding-top: 5px;
+                width:26px;
+                height:26px;
+            }
+
+            #search_bar {
+                width: 258px;
+                height: 31px;
+                margin-left: 39px;
+                border-radius: 50px;
+                padding-left:40px;
+                font-size: 18px;
+                color:black;
+            }
+            input:focus {outline:none;}
+
+            #search_bar::placeholder {
+                color:#8c8c8c;
+                font-size: 18px;
+            }
+
+            #nav_bar {
+                height:41px;
+                color:white;
+                text-align: center;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            #big_search_lyrics {
+                color:rgb(255, 255, 100);
+                font-size: 72px;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            }
+
+            #big_search_wrapper {
+                text-align:center;
+            }
+
+            #big_search_bar {
+                width:65%;
+                height:67px;
+                border-radius: 50px;
+                font-size: 50px;
+                padding-left:100px;
+            }
+
+            #big_icon {
+                width:58px;
+                height:58px;
+                position:absolute;
+                padding-left: 20px;
+                padding-top: 10px;
+            }
+
+            #recent_searches {
+                color: rgb(255, 255, 100);
+            }
+
+            #recent_searches_wrapper {
+                text-align: center;
+                font-size: 24px;
+            }
+
+            .scrolling-wrapper {
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+
+            .item {
+                display: inline-block;
+                color:black;
+                background-color:rgb(255, 255, 100);
+                border-radius: 50px;
+                width:214px;
+                height:75px;
+                vertical-align:middle;
+                margin-left:2%;
+                margin-right:2%;
+                text-align:start;
+                
+            }
+
+            #image_name_wrapper {
+                display: flex;
+            }
+
+            #song_image {
+                width:75px;
+                height:75px;
+                border-radius: 50px 0px 0px 50px;
+            }
+
+            #song_name {
+                position:relative;
+                font-size: 18px;
+                margin-top:0;
+                margin-bottom:0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+                padding-top:15px;
+            }
+
+            #song_artist {
+                position:relative;
+                font-size: 14px;
+                margin-top:0;
+                margin-bottom:0;
+            }
+
+            .scrolling-wrapper-flexbox {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+
+            .scrolling-wrapper {
+            -webkit-overflow-scrolling: touch;
+            }
+
+            #album_image {
+                width: 180px;
+                height: 180px;
+            }
+
+            #trending {
+                color:rgb(255, 255, 100);
+            }
+
+            #album_info {
+                color:white;
+                margin-top:0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            }
+
+            .item_2 {
+                display: inline-block;
+                margin-left:2%;
+                margin-right:2%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            }
+
+            .item_2:hover{
+                background-color:lightgrey;
+            }
+
+            .album {
+                width: 180px;
+            }
+
+/* .scrolling-wrapper {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+} */
+            
+        </style>
+    </head>
+
+    <body id="background">
+        <div id="top_bar">
+            <div id="search_wrapper">
+                <img id="search_bar_icon" src="search_icon.png">
+                <input id="search_bar" name="search" placeholder="Search lyrics and more">          
+            </div>
+            
+            <img class="top_bar_items" id="genius_logo" src="genius_logo.png">
+            <p class="top_bar_items" id="sign_up_in">Sign Up &nbsp &nbsp &nbsp &nbsp Sign In</p>
+        </div>
+        <div id="nav_bar">
+            <p>Featured &nbsp &nbsp | &nbsp &nbsp Charts &nbsp &nbsp | &nbsp &nbsp Videos &nbsp &nbsp | &nbsp &nbsp Shop</p> 
+        </div>
+
+        <p id="big_search_lyrics">Search lyrics and more</p>
+        <div id="big_search_wrapper">
+                <img id="big_icon" src="search_icon.png">
+                <input id="big_search_bar" name="search">
+        </div>
+        <div id="recent_searches_wrapper">
+            <p id="recent_searches">Recent Searches</p>
+            <div class="scrolling-wrapper">
+                    <div class="item">
+                        <div id="image_name_wrapper">
+                                <img id="song_image" src="gods_plan.jpg">
+                                <p id="song_name">
+                                    God's Plan <br>
+                                    Drake
+                                </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                            <div id="image_name_wrapper">
+                                    <img id="song_image" src="circles.jpg">
+                                    <p id="song_name">
+                                        Circles <br>
+                                        Post Malone
+                                    </p>
+                            </div>
+                        </div>
+                    <div class="item">
+                            <div id="image_name_wrapper">
+                                    <img id="song_image" src="nas.jpg">
+                                    <p id="song_name">
+                                        The World is Yours <br>
+                                        Nas
+                                    </p>
+                            </div>
+                    </div>
+                    <div class="item">
+                            <div id="image_name_wrapper">
+                                    <img id="song_image" src="money_trees.jpg">
+                                    <p id="song_name">
+                                        Money Trees <br>
+                                        Kendrick Lamar
+                                    </p>
+                            </div>
+                    </div> 
+                    <div class="item">
+                            <div id="image_name_wrapper">
+                                    <img id="song_image" src="forest_hills.jpg">
+                                    <p id="song_name">
+                                        January 28th<br>
+                                        J. Cole
+                                    </p>
+                            </div>
+                    </div> 
+                    <div class="item">
+                            <div id="image_name_wrapper">
+                                    <img id="song_image" src="forest_hills.jpg">
+                                    <p id="song_name">
+                                        January 28th<br>
+                                        J. Cole
+                                    </p>
+                            </div>
+                    </div>  
+                    <div class="item">
+                            <div id="image_name_wrapper">
+                                    <img id="song_image" src="forest_hills.jpg">
+                                    <p id="song_name">
+                                        January 28th<br>
+                                        J. Cole
+                                    </p>
+                            </div>
+                    </div>                    
+                  </div>
+                  <p id="trending">Trending</p>
+
+            <div class="scrolling-wrapper">
+                <div class="item_2">
+                    <div class="album">
+                        <img id="album_image" src="lights_up.jpg">
+                        <p id="album_info">
+                            Lights Up <br>
+                            Harry Styles
+                        </p>
+                    </div>
+                </div>
+                <div class="item_2">
+                    <div class="album">
+                        <img id="album_image" src="travis.jpg">
+                        <p id="album_info">
+                            Highest in the Room <br>
+                            Travis Scott
+                        </p>
+                    </div>
+                </div>
+                <div class="item_2">
+                        <div class="album">
+                            <img id="album_image" src="panini.jpg">
+                            <p id="album_info">
+                                Panini <br>
+                                Lil Nas X
+                            </p>
+                        </div>
+                </div>
+                <div class="item_2">
+                        <div class="album">
+                            <img id="album_image" src="lucid_dreams.png">
+                            <p id="album_info">
+                                Lucid Dreams <br>
+                                Juice WRLD
+                            </p>
+                        </div>
+                </div>
+                <div class="item_2">
+                        <div class="album">
+                            <img id="album_image" src="sunflower.jpg">
+                            <p id="album_info">
+                                Sunflower <br>
+                                Post Malone, Swae Lee
+                            </p>
+                        </div>
+                </div>
+                <div class="item_2">
+                        <div class="album">
+                            <img id="album_image" src="bad_guy.jpg">
+                            <p id="album_info">
+                                bad guy <br>
+                                Billie Eilish
+                            </p>
+                        </div>
+                </div>
+                <div class="item_2">
+                        <div class="album">
+                            <img id="album_image" src="gods_plan.jpg">
+                            <p id="album_info">
+                                God's Plan <br>
+                                Drake
+                            </p>
+                        </div>
+                </div>
+                <div class="item_2">
+                        <div class="album">
+                            <img id="album_image" src="forest_hills.jpg">
+                            <p id="album_info">
+                                No Role Modelz <br>
+                                J. Cole
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>
