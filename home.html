@@ -81,6 +81,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis; 
+                margin-bottom:0;
             }
 
             #big_search_wrapper {
@@ -129,7 +130,10 @@
                 margin-left:2%;
                 margin-right:2%;
                 text-align:start;
-                
+            }
+
+            .item:hover {
+                background-color: lightgrey;
             }
 
             #image_name_wrapper {
@@ -176,7 +180,9 @@
             }
 
             #trending {
+                margin-top:3%;
                 color:rgb(255, 255, 100);
+                font-size: 48px;
             }
 
             #album_info {
@@ -204,6 +210,18 @@
                 width: 180px;
             }
 
+            .category_wrapper {
+                display:inline-block;
+                justify-content: space-around;
+                margin-left:5%;
+                margin-right:5%;
+                width:150px;
+            }
+
+            .category_wrapper:hover {
+                background-color: lightgrey;
+            }
+
 /* .scrolling-wrapper {
   &::-webkit-scrollbar {
     display: none;
@@ -224,7 +242,11 @@
             <p class="top_bar_items" id="sign_up_in">Sign Up &nbsp &nbsp &nbsp &nbsp Sign In</p>
         </div>
         <div id="nav_bar">
-            <p>Featured &nbsp &nbsp | &nbsp &nbsp Charts &nbsp &nbsp | &nbsp &nbsp Videos &nbsp &nbsp | &nbsp &nbsp Shop</p> 
+            <div class="category_wrapper"><p class="categories">Featured</p> </div>
+            <div class="category_wrapper"><p class="categories">Charts</p> </div>
+            <div class="category_wrapper"><p class="categories">Videos</p> </div>
+            <div class="category_wrapper"><p class="categories">Shop</p> </div>
+
         </div>
 
         <p id="big_search_lyrics">Search lyrics and more</p>
