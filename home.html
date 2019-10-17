@@ -113,7 +113,7 @@
                 font-size: 24px;
             }
 
-            .scrolling-wrapper {
+            .scrolling_wrapper {
                 overflow-x: scroll;
                 overflow-y: hidden;
                 white-space: nowrap;
@@ -164,14 +164,15 @@
                 margin-bottom:0;
             }
 
-            .scrolling-wrapper-flexbox {
+            .scrolling_wrapper_flexbox {
                 display: flex;
                 flex-wrap: nowrap;
                 overflow-x: auto;
             }
 
-            .scrolling-wrapper {
-            -webkit-overflow-scrolling: touch;
+            /* For mobile devices */
+            .scrolling_wrapper {
+                -webkit-overflow-scrolling: touch;
             }
 
             #album_image {
@@ -195,8 +196,8 @@
 
             .item_2 {
                 display: inline-block;
-                margin-left:2%;
-                margin-right:2%;
+                margin-left:3%;
+                margin-right:3%;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis; 
@@ -204,10 +205,6 @@
 
             .item_2:hover{
                 background-color:lightgrey;
-            }
-
-            .album {
-                width: 180px;
             }
 
             .category_wrapper {
@@ -221,12 +218,6 @@
             .category_wrapper:hover {
                 background-color: lightgrey;
             }
-
-/* .scrolling-wrapper {
-  &::-webkit-scrollbar {
-    display: none;
-  }
-} */
             
         </style>
     </head>
@@ -256,7 +247,7 @@
         </div>
         <div id="recent_searches_wrapper">
             <p id="recent_searches">Recent Searches</p>
-            <div class="scrolling-wrapper">
+            <div class="scrolling_wrapper">
                     <div class="item">
                         <div id="image_name_wrapper">
                                 <img id="song_image" src="gods_plan.jpg">
@@ -323,7 +314,7 @@
                   </div>
                   <p id="trending">Trending</p>
 
-            <div class="scrolling-wrapper">
+            <div class="wrapper">
                 <div class="item_2">
                     <div class="album">
                         <img id="album_image" src="lights_up.jpg">
